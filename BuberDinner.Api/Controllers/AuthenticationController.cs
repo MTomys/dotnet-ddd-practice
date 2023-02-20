@@ -28,9 +28,11 @@ public class AuthenticationController : ApiController
         var command = _mapper.Map<RegisterCommand>(request);
 
         ErrorOr<AuthenticationResult> authResult = await _mediator.Send(command);
+        
+        var mapResult = _mapper.Map<AuthenticationResponse>(authResult.Value);
 
         return authResult.Match(
-            result => Ok(_mapper.Map<AuthenticationResponse>(authResult)),
+            result => Ok(mapResult),
             Problem
         );
     }
@@ -50,7 +52,7 @@ public class AuthenticationController : ApiController
         }
 
         return authResult.Match(
-            result => Ok(_mapper.Map<AuthenticationResponse>(authResult)),
+            result => Ok(_mapper.Map<AuthenticationResponse>(authResult.Value)),
             Problem
         );
     }

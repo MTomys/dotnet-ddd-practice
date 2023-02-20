@@ -1,4 +1,5 @@
-﻿using BuberDinner.Application.Authentication.Commands.Register;
+﻿using System.Runtime.CompilerServices;
+using BuberDinner.Application.Authentication.Commands.Register;
 using BuberDinner.Application.Authentication.Common;
 using BuberDinner.Application.Authentication.Queries.Login;
 using BuberDinner.Contracts.Authentication;
@@ -15,6 +16,7 @@ public class AuthenticationMappingConfig : IRegister
         config.NewConfig<LoginRequest, LoginQuery>();
 
         config.NewConfig<AuthenticationResult, AuthenticationResponse>()
+            .Map(dest => dest.Token, src => src.Token)
             .Map(dest => dest, src => src.User);
     }
 }
