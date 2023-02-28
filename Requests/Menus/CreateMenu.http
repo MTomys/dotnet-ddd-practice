@@ -1,0 +1,20 @@
+﻿POST  https://localhost:7076/hosts/e144090c-1aa2-440f-a5c0-eed37da389bd/menus
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMTQ0MDkwYy0xYWEyLTQ0MGYtYTVjMC1lZWQzN2RhMzg5YmQiLCJnaXZlbl9uYW1lIjoiTWljaGFsIiwiZmFtaWx5X25hbWUiOiJUb215cyIsImp0aSI6ImNiYzExNGJhLTY3ZWMtNDI2OC1hMTZjLTY1Zjk0MzJiM2E4MSIsImV4cCI6MTY3NzYyMTM5NywiaXNzIjoiTWUiLCJhdWQiOiJNZSA6KSJ9.ZnzxbKWAAkiIycXyEmmYO71BGSoVrN9rgPzsGso9QYQ
+
+{
+  "name": "Yummy Menu",
+  "description": "desc",
+  "sections": [
+    {
+      "name": "Appetizers",
+      "description": "descsection",
+      "menuItems": [
+        {
+          "name": "burger",
+          "description": "tasty burger"
+        }
+      ]
+    }
+  ]
+}

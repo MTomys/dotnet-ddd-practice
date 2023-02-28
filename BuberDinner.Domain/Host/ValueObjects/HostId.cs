@@ -20,4 +20,9 @@ public class HostId : ValueObject
     {
         return new(Guid.NewGuid());
     }
+
+    public static HostId Create(string id)
+    {
+        return new HostId(Guid.Parse(id));
+    }
 }
