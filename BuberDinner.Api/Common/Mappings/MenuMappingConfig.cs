@@ -1,5 +1,6 @@
 ﻿using BuberDinner.Application.Menus.Commands.CreateMenu;
 using BuberDinner.Contracts.Menus;
+using BuberDinner.Domain.Host.ValueObjects;
 using BuberDinner.Domain.Menu;
 using Mapster;
 using MenuItem = BuberDinner.Domain.Menu.MenuItem;
@@ -13,7 +14,7 @@ public class MenuMappingConfig : IRegister
     {
         config.NewConfig<(CreateMenuRequest request, string hostId), CreateMenuCommand>()
             .Map(dest => dest.HostId, src => src.hostId)
-            .Map(dest => dest, src => src);
+            .Map(dest => dest, src => src.request);
 
         config.NewConfig<Menu, MenuResponse>()
             .Map(dest => dest.Id, src => src.Id.Value)

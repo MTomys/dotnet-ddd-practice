@@ -1,20 +1,36 @@
-﻿POST  https://localhost:7076/hosts/e144090c-1aa2-440f-a5c0-eed37da389bd/menus
+﻿POST  https://localhost:7076/hosts/2aa33262-0395-4cad-b9e5-5bdc4b09842c/menus
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMTQ0MDkwYy0xYWEyLTQ0MGYtYTVjMC1lZWQzN2RhMzg5YmQiLCJnaXZlbl9uYW1lIjoiTWljaGFsIiwiZmFtaWx5X25hbWUiOiJUb215cyIsImp0aSI6ImNiYzExNGJhLTY3ZWMtNDI2OC1hMTZjLTY1Zjk0MzJiM2E4MSIsImV4cCI6MTY3NzYyMTM5NywiaXNzIjoiTWUiLCJhdWQiOiJNZSA6KSJ9.ZnzxbKWAAkiIycXyEmmYO71BGSoVrN9rgPzsGso9QYQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYWEzMzI2Mi0wMzk1LTRjYWQtYjllNS01YmRjNGIwOTg0MmMiLCJnaXZlbl9uYW1lIjoiTWljaGFsIiwiZmFtaWx5X25hbWUiOiJUb215cyIsImp0aSI6IjFmZDgyODcwLTgwOWItNGE3OS04NTBmLTNkNjQ4MzEyMTA2NSIsImV4cCI6MTY3Nzg3OTY4MCwiaXNzIjoiTWUiLCJhdWQiOiJNZSA6KSJ9.SrxmIhF0Mpih4nq8n4h9uEjfrOACR8ENyWyLjGIb20g
 
 {
+  "id": "00000000-0000-0000-0000-000000000000",
   "name": "Yummy Menu",
   "description": "desc",
+  "averageRating": {
+    "value":4.5,
+    "numRatings": 1
+  },
   "sections": [
     {
+      "id": "00000000-0000-0000-0000-000000000000",
       "name": "Appetizers",
       "description": "descsection",
       "menuItems": [
         {
+          "id": "00000000-0000-0000-0000-000000000000",
           "name": "burger",
           "description": "tasty burger"
         }
       ]
     }
-  ]
+  ],
+  "hostId": "00000000-0000-0000-0000-000000000000",
+  "dinnerIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "menuReviewIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "createdDateTime": "2020-01-01T00:00.0000000Z",
+  "updatedDateTime": "2020-01-01T00:00.0000000Z"
 }
