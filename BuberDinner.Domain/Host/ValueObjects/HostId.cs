@@ -16,7 +16,7 @@ public class HostId : ValueObject
         yield return Value;
     }
 
-    public static HostId CreateUnique()
+    public static HostId CreateUnique(Guid value)
     {
         return new(Guid.NewGuid());
     }

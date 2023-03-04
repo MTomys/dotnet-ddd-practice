@@ -20,4 +20,9 @@ public sealed class MenuItemId : ValueObject
     {
         yield return Value;
     }
+
+    public static MenuItemId CreateUnique(Guid value)
+    {
+        return new MenuItemId(value);
+    }
 }

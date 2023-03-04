@@ -13,7 +13,7 @@ public sealed class Menu : AggregateRoot<MenuId>
     private readonly List<MenuReviewId> _menuReviewIds = new();
     public string Name { get; }
     public string Description { get; }
-    public float AverageRating { get; }
+    public AverageRating AverageRating { get; }
 
     private Menu(MenuId menuId,
         string name,
