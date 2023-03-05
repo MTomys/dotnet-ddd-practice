@@ -12,11 +12,16 @@ public class DinnerId : ValueObject
     }
     public override IEnumerable<object> GetEqualityComponents()
     {
-        throw new NotImplementedException();
+        yield return Value;
     }
 
     public static DinnerId CreateUnique()
     {
         return new(Guid.NewGuid());
+    }
+
+    public static DinnerId Create(Guid value)
+    {
+        return new DinnerId(value);
     }
 }

@@ -9,6 +9,11 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>> where TId : notnull
         Id = id;
     }
 
+    protected Entity()
+    {
+        
+    }
+
     public override bool Equals(object? obj)
     {
         if (ReferenceEquals(null, obj)) return false;
